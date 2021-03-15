@@ -12,7 +12,7 @@ extern char NONWORD[]; // a sign word for termination
 
 typedef struct State State;
 typedef struct Suffix Suffix;
-typedef struct Word Word;
+typedef struct Suffix Word;
 
 struct State {
     char *pref[NPREF]; // prefix words
@@ -23,11 +23,6 @@ struct State {
 struct Suffix {
     char *word; // suffix
     Suffix *next; // next in list of suffixes
-};
-
-struct Word {
-    char *word;
-    Word *next; // next in hash table
 };
 
 State *statetab[NHASH]; // hash table of states
