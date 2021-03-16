@@ -24,7 +24,7 @@ unsigned int hashWord(char *s) {
 
 char* lookupWord(char *s, int create) {
     Word *wp;
-    int h, i;
+    int h;
 
     h = hashWord(s);
     wp = wordtab[h];
